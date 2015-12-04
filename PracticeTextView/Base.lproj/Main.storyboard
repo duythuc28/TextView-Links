@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="JYm-0V-QWi">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--Custom Text View Table View Controller-->
+        <scene sceneID="33S-BQ-QTE">
+            <objects>
+                <tableViewController id="eff-3p-ufk" customClass="CustomTextViewTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="yhW-Hg-bRb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="150" id="ckm-0o-jHd" customClass="CustomTableViewCell">
+                                <rect key="frame" x="0.0" y="92" width="320" height="150"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ckm-0o-jHd" id="So0-ge-c0p">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="149"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="M4E-h5-uqw">
+                                            <rect key="frame" x="0.0" y="10" width="320" height="129"/>
+                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                        </textView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="M4E-h5-uqw" secondAttribute="trailing" id="GUz-Ur-bUe"/>
+                                        <constraint firstAttribute="bottom" secondItem="M4E-h5-uqw" secondAttribute="bottom" constant="10" id="J8U-fa-vGa"/>
+                                        <constraint firstItem="M4E-h5-uqw" firstAttribute="top" secondItem="So0-ge-c0p" secondAttribute="top" constant="10" id="U91-Aa-YKx"/>
+                                        <constraint firstItem="M4E-h5-uqw" firstAttribute="leading" secondItem="So0-ge-c0p" secondAttribute="leading" id="xZb-Mq-mc5"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="textView" destination="M4E-h5-uqw" id="Y5l-KB-zlL"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="eff-3p-ufk" id="tgb-bT-f0T"/>
+                            <outlet property="delegate" destination="eff-3p-ufk" id="FQa-SL-1cD"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="MDT-6O-LQH"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4J8-SG-8bA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="652" y="95"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jqK-ox-QrI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JYm-0V-QWi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eNK-fy-Chj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eff-3p-ufk" kind="relationship" relationship="rootViewController" id="9b4-dd-C8b"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gCc-nI-Vwt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="120" y="95"/>
+        </scene>
+    </scenes>
+</document>
